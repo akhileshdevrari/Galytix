@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CountryGwp</name>
+    </assembly>
+    <members>
+        <member name="T:CountryGwp.Controllers.GwpAvgController">
+            <summary>
+            Controller to process GwpItems and calculate average GWP
+            </summary>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpAvgController.#ctor(CountryGwp.Models.GwpContext,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context">Database context object</param>
+            <param name="cache">In memory cache</param>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpAvgController.PostAvg(CountryGwp.Models.GwpAvgRequest)">
+            <summary>
+            Process the average GWP with given filters
+            </summary>
+            <param name="request">Request body of the POST method</param>
+            <returns>Response of the POST call</returns>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpAvgController.GetGwpAvg(System.String,System.String)">
+            <summary>
+            Get average GWP for a given business in the given country
+            </summary>
+            <param name="country">Country of business</param>
+            <param name="business">Line of business</param>
+            <returns>Average Gwp for the given LOB in the given country</returns>
+        </member>
+        <member name="T:CountryGwp.Controllers.GwpItemsController">
+            <summary>
+            Controller for CRUD operations on GWP items
+            </summary>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpItemsController.#ctor(CountryGwp.Models.GwpContext)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="context">Database context</param>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpItemsController.GetGwpItems">
+            <summary>
+            Get all GwpItem from database
+            </summary>
+            <returns>List of GwpItem present in the database</returns>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpItemsController.GetGwpItem(System.Int64)">
+            <summary>
+            Gets a GwpItem with given id
+            </summary>
+            <param name="id">Id of the GwpItem</param>
+            <returns>GwpItem corresponding to given id, 404 if not found</returns>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpItemsController.PutGwpItem(System.Int64,CountryGwp.Models.GwpItem)">
+            <summary>
+            Updates an existing GwpItem
+            </summary>
+            <param name="id">Id of the GwpItem</param>
+            <param name="gwpItem">Updated GwpItem</param>
+            <returns></returns>
+        </member>
+        <member name="M:CountryGwp.Controllers.GwpItemsController.PostGwpItem(CountryGwp.Models.GwpItem)">
+            <summary>
+            Creates new GwpItem
+            </summary>
+            <param name="gwpItem">GwpItem object</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CountryGwp.Controllers.GwpItemsController.DeleteGwpItem(System.Int64)" -->
+        <member name="M:CountryGwp.Controllers.GwpItemsController.GwpItemExists(System.Int64)">
+            <summary>
+            Check if a GwpItem exists with given id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CountryGwp.Models.GwpAvgRequest">
+            <summary>
+            Input Model for GwpAvgController
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpAvgRequest.Country">
+            <summary>
+            Country filter
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpAvgRequest.Businesses">
+            <summary>
+            Businesses filter
+            </summary>
+        </member>
+        <member name="T:CountryGwp.Models.GwpAvgResponse">
+            <summary>
+            Response model for GwpAvgController
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpAvgResponse.Business">
+            <summary>
+            Line of Business
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpAvgResponse.AverageGwp">
+            <summary>
+            Average GWP in given timeframe
+            </summary>
+        </member>
+        <member name="T:CountryGwp.Models.GwpContext">
+            <summary>
+            Database context for GwpItems
+            </summary>
+        </member>
+        <member name="M:CountryGwp.Models.GwpContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{CountryGwp.Models.GwpContext})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="options">DB context options</param>
+        </member>
+        <member name="P:CountryGwp.Models.GwpContext.GwpItems">
+            <summary>
+            GwpItems in the database
+            </summary>
+        </member>
+        <member name="T:CountryGwp.Models.GwpItem">
+            <summary>
+            GWP schema
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpItem.Id">
+            <summary>
+            Primary Key
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpItem.Year">
+            <summary>
+            Year of record
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpItem.Country">
+            <summary>
+            Country of record
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpItem.Business">
+            <summary>
+            Line of Business
+            </summary>
+        </member>
+        <member name="P:CountryGwp.Models.GwpItem.Amount">
+            <summary>
+            GWP amount
+            </summary>
+        </member>
+    </members>
+</doc>

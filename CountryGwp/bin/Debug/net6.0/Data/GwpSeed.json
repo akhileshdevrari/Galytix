@@ -1,0 +1,72 @@
+[
+    {
+        "Id": 1,
+        "Year": 2008,
+        "Country": "India",
+        "Business": "Tech",
+        "Amount": 1000.00
+    },
+    {
+        "Id": 2,
+        "Year": 2008,
+        "Country": "India",
+        "Business": "Pharma",
+        "Amount": 500.00
+    },
+    {
+        "Id": 3,
+        "Year": 2010,
+        "Country": "USA",
+        "Business": "Pharma",
+        "Amount": 100.00
+    },
+    {
+        "Id": 4,
+        "Year": 2010,
+        "Country": "USA",
+        "Business": "Tech",
+        "Amount": 800.00
+    },
+    {
+        "Id": 5,
+        "Year": 2012,
+        "Country": "USA",
+        "Business": "Tech",
+        "Amount": 800.00
+    },
+    {
+        "Id": 6,
+        "Year": 2012,
+        "Country": "USA",
+        "Business": "Pharma",
+        "Amount": 800.00
+    },
+    {
+        "Id": 7,
+        "Year": 2015,
+        "Country": "India",
+        "Business": "Tech",
+        "Amount": 3000.00
+    },
+    {
+        "Id": 8,
+        "Year": 2015,
+        "Country": "India",
+        "Business": "Pharma",
+        "Amount": 1600.00
+    },
+    {
+        "Id": 9,
+        "Year": 2022,
+        "Country": "India",
+        "Business": "Pharma",
+        "Amount": 1500.00
+    },
+    {
+        "Id": 10,
+        "Year": 2022,
+        "Country": "India",
+        "Business": "Tech",
+        "Amount": 2000.00
+    }
+]
